@@ -33,48 +33,6 @@ MotorHub brings customers and dealership administrators together through a singl
 | **Testing** | Jest and Supertest |
 | **Development Approach** | Test-Driven Development (TDD) |
 
-## 📸 Application Preview
-
-MotorHub provides separate functionality for customers and administrators, making it possible to browse vehicles and manage dealership inventory through a web interface.
-
-> **Add your actual application screenshots to the `screenshots/` folder in the repository.** Replace the filenames below if yours are different.
-
-### Admin Dashboard
-
-![MotorHub Admin Dashboard](screenshots/admin-dashboard.png)
-
-*The administrator's interface for managing dealership inventory.*
-
-### Available Vehicles
-
-![MotorHub Available Vehicles](screenshots/available-vehicles.png)
-
-*The available vehicle listings displayed in MotorHub.*
-
-### Add a Vehicle
-
-![MotorHub Add Vehicle](screenshots/add-vehicle.png)
-
-*The interface for adding a vehicle to the inventory.*
-
-### Delete a Vehicle
-
-![MotorHub Delete Vehicle](screenshots/delete-vehicle.png)
-
-*The administrator's vehicle deletion workflow.*
-
-### Authentication
-
-![MotorHub Login](screenshots/login.png)
-
-*The user login interface.*
-
-![MotorHub Registration](screenshots/registration.png)
-
-*The user registration interface.*
-
----
-
 ## 🎯 Project Overview
 
 Car dealerships need an effective way to maintain vehicle records, monitor inventory, and provide customers with access to available vehicles. Managing these operations without a centralized system can make inventory updates and access control more difficult.
