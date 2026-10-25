@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
 
-const API = "http://localhost:5000/api";
+const API = "https://motorhub-car-dealership.onrender.com/api";
 
 function App() {
   const [vehicles, setVehicles] = useState([]);
