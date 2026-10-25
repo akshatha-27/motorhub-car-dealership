@@ -60,8 +60,8 @@ The backend requires the following environment variables:
 
 Use the following credentials to access the admin dashboard:
 
-- **Email:** `your-demo-admin-email`
-- **Password:** `your-demo-admin-password`
+- **Email:** `admin@motorhub.com`
+- **Password:** `admin123`
 
 **Note:** These credentials are provided for project evaluation and demonstration purposes only.
 
