@@ -260,7 +260,7 @@ function App() {
       <main className="page">
         <section className="login-card">
           <p className="eyebrow">DEALERSHIP PORTAL</p>
-          <h1>Car Inventory</h1>
+          <h1>MotorHub</h1>
           <p className="muted">Sign in to browse available vehicles.</p>
 
           <form onSubmit={login}>
