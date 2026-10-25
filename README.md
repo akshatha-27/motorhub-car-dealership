@@ -293,15 +293,6 @@ During development, the following verification results were observed:
 
 <img width="494" height="368" alt="image" src="https://github.com/user-attachments/assets/170308ad-1de7-4595-8e9c-dc92eeca2b60" />
 
-
-| Verification | Result |
-|---|---|
-| Authentication test suite | Passed |
-| Vehicle test suite | Passed |
-| Total automated tests | 8 passed |
-| Frontend production build | Passed |
-| Frontend lint | 0 errors, 3 warnings |
-
 These results reflect the recorded development run. Run the commands again against the submitted code to verify the current state.
 
 ### Test-Driven Development Approach
