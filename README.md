@@ -1,143 +1,173 @@
-# MotorHub — Car Dealership Inventory Management System
+# 🚗 MotorHub
+### Car Dealership Inventory Management System
 
-A full-stack web application for managing car dealership inventory, built with React, Node.js, Express.js, and MongoDB. MotorHub provides a centralized interface for browsing vehicles, managing inventory, and handling user authentication and vehicle purchases.
+**A full-stack web application for smarter vehicle inventory management.**
 
-This project was developed as part of the **Incubyte TDD Kata: Car Dealership Inventory System**, with an emphasis on clean code, test-driven development, RESTful API design, and maintainable software.
+MotorHub brings customers and dealership administrators together through a single platform for browsing vehicles, managing inventory, and handling user authentication.
 
-## Table of Contents
+<p align="center">
+  <strong>React · Node.js · Express.js · MongoDB · Jest</strong>
+</p>
 
-- [Overview](#overview)
-- [Problem Statement](#problem-statement)
-- [Key Features](#key-features)
-- [Technology Stack](#technology-stack)
-- [System Architecture](#system-architecture)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Environment Configuration](#environment-configuration)
-- [Running the Application](#running-the-application)
-- [Testing and TDD](#testing-and-tdd)
-- [API Overview](#api-overview)
-- [Security and Design Considerations](#security-and-design-considerations)
-- [AI Usage Disclosure](#ai-usage-disclosure)
-- [Future Improvements](#future-improvements)
+<p align="center">
+  <a href="https://github.com/akshatha-27/motorhub-car-dealership">GitHub Repository</a>
+  ·
+  <a href="#-getting-started">Setup Guide</a>
+  ·
+  <a href="#-testing-and-test-report">Test Report</a>
+  ·
+  <a href="#-my-ai-usage">My AI Usage</a>
+</p>
 
-## Overview
+---
 
-MotorHub is a full-stack car dealership inventory system that separates the user interface, backend business logic, and persistent data storage into distinct components.
+## ✨ At a Glance
 
-The application supports two primary roles:
+| | |
+|---|---|
+| **Project** | MotorHub – Car Dealership Inventory System |
+| **Project Type** | Full-stack web application |
+| **Frontend** | React and Vite |
+| **Backend** | Node.js and Express.js |
+| **Database** | MongoDB |
+| **Testing** | Jest and Supertest |
+| **Development Approach** | Test-Driven Development (TDD) |
 
-- **Customer:** Register, log in, browse available vehicles, filter inventory, and purchase vehicles.
-- **Administrator:** Manage vehicle inventory, add new vehicles, update existing vehicle details, delete vehicles, and restock inventory.
+## 📸 Application Preview
 
-The frontend communicates with the backend through HTTP API requests. The backend processes requests, applies authentication and authorization rules, and interacts with MongoDB to persist application data.
+MotorHub provides separate functionality for customers and administrators, making it possible to browse vehicles and manage dealership inventory through a web interface.
 
-## Problem Statement
+> **Add your actual application screenshots to the `screenshots/` folder in the repository.** Replace the filenames below if yours are different.
 
-Car dealerships need a reliable way to maintain vehicle records, monitor stock availability, and provide customers with an accessible inventory browsing experience.
+### Admin Dashboard
 
-Manual inventory management can make it difficult to maintain accurate stock information, manage vehicle details, and control access to administrative operations.
+![MotorHub Admin Dashboard](screenshots/admin-dashboard.png)
 
-MotorHub addresses these needs through a web-based application with persistent storage, role-based access, inventory management functionality, and automated tests.
+*The administrator's interface for managing dealership inventory.*
 
-## Key Features
+### Available Vehicles
 
-### 1. User Authentication and Authorization
+![MotorHub Available Vehicles](screenshots/available-vehicles.png)
 
+*The available vehicle listings displayed in MotorHub.*
+
+### Add a Vehicle
+
+![MotorHub Add Vehicle](screenshots/add-vehicle.png)
+
+*The interface for adding a vehicle to the inventory.*
+
+### Delete a Vehicle
+
+![MotorHub Delete Vehicle](screenshots/delete-vehicle.png)
+
+*The administrator's vehicle deletion workflow.*
+
+### Authentication
+
+![MotorHub Login](screenshots/login.png)
+
+*The user login interface.*
+
+![MotorHub Registration](screenshots/registration.png)
+
+*The user registration interface.*
+
+---
+
+## 🎯 Project Overview
+
+Car dealerships need an effective way to maintain vehicle records, monitor inventory, and provide customers with access to available vehicles. Managing these operations without a centralized system can make inventory updates and access control more difficult.
+
+**MotorHub addresses this problem through a full-stack inventory management application.**
+
+The frontend provides the user interface, the Express backend handles API requests and application logic, and MongoDB stores user and vehicle information.
+
+The project was developed as part of the **Incubyte TDD Kata: Car Dealership Inventory System**, with a focus on modular code, RESTful API design, automated testing, and maintainability.
+
+## 🚀 Key Features
+
+### 👤 User Authentication
 - User registration and login.
 - Authentication for protected operations.
 - Role-based access for customers and administrators.
-- Restricted inventory management operations for authorized administrators.
-- Admin account initialization through a dedicated seed script.
+- Administrator initialization through a seed script.
 
-### 2. Vehicle Inventory Management
-
-- Display available vehicles.
-- Search and filter vehicles by category.
-- Add new vehicles to the inventory.
-- Edit existing vehicle information.
+### 🚘 Vehicle Inventory Management
+- View available vehicles.
+- Search and filter vehicle listings.
+- Add new vehicles to inventory.
+- Update existing vehicle details.
 - Delete vehicle records.
-- Restock vehicles and update inventory quantities.
-- Maintain vehicle information in MongoDB.
+- Restock inventory and update quantities.
 
-### 3. Vehicle Purchasing
+### 🛒 Customer Functionality
+- Browse available vehicles.
+- Filter vehicle listings.
+- Initiate vehicle purchases through the application.
+- Receive feedback for application operations.
 
-- Allow customers to initiate vehicle purchases through the application.
-- Provide user feedback for successful operations and errors.
-- Connect purchase operations to the backend inventory functionality.
+### 🛡️ Backend and Maintainability
+- REST API built with Express.js.
+- MongoDB persistence using Mongoose.
+- Authentication middleware for protected operations.
+- Modular routes, models, and middleware.
+- Automated backend tests using Jest and Supertest.
 
-### 4. User Interface
+## 🧰 Technology Stack
 
-- React-based single-page application.
-- Organized interface for browsing and managing inventory.
-- Separate customer-facing and administrative functionality.
-- Feedback messages for important actions.
-- Responsive styling using CSS.
-
-### 5. Testing and Maintainability
-
-- Automated backend tests using Jest.
-- HTTP endpoint testing with Supertest.
-- Separate authentication and vehicle test suites.
-- Test execution through a dedicated npm script.
-- A modular backend structure separating routes, models, middleware, and server configuration.
-
-## Technology Stack
-
-| Component | Technology |
+| Technology | Purpose |
 |---|---|
-| Frontend | React |
-| Build tool | Vite |
-| Styling | CSS |
-| Backend | Node.js |
-| Web framework | Express.js |
-| Database | MongoDB |
-| Data modelling | Mongoose |
-| Authentication | Token-based authentication and authorization middleware |
-| Testing | Jest and Supertest |
-| Version control | Git and GitHub |
+| React | User interface |
+| Vite | Frontend development and build tool |
+| CSS | Styling and responsive presentation |
+| Node.js | Backend JavaScript runtime |
+| Express.js | REST API and server framework |
+| MongoDB | Database |
+| Mongoose | Database modelling |
+| Jest | Backend test runner |
+| Supertest | HTTP endpoint testing |
+| Git and GitHub | Version control and source hosting |
 
-## System Architecture
+## 🏗️ System Architecture
 
-MotorHub follows a client-server architecture.
+MotorHub uses a client-server architecture in which the frontend communicates with the backend through HTTP requests.
 
 ```text
-+-----------------------------+
-|       React Frontend        |
-|                             |
-| Registration and Login      |
-| Vehicle Search and Filters  |
-| Inventory Administration   |
-| Purchase Interface          |
-+--------------+--------------+
-               |
-               | HTTP / REST API
-               v
-+-----------------------------+
-|      Express Backend        |
-|                             |
-| Authentication Routes       |
-| Vehicle Routes              |
-| Authentication Middleware   |
-| Business Logic              |
-+--------------+--------------+
-               |
-               | Mongoose
-               v
-+-----------------------------+
-|          MongoDB            |
-|                             |
-| User Records                |
-| Vehicle Records             |
-+-----------------------------+
+┌──────────────────────────────┐
+│        React Frontend        │
+│                              │
+│  Login and Registration      │
+│  Vehicle Listings            │
+│  Inventory Administration    │
+│  Customer Purchase Interface │
+└──────────────┬───────────────┘
+               │
+               │ HTTP / REST API
+               ▼
+┌──────────────────────────────┐
+│       Express Backend        │
+│                              │
+│  Authentication Routes       │
+│  Vehicle Routes              │
+│  Authentication Middleware   │
+│  Application Logic           │
+└──────────────┬───────────────┘
+               │
+               │ Mongoose
+               ▼
+┌──────────────────────────────┐
+│           MongoDB            │
+│                              │
+│  User Records                │
+│  Vehicle Records             │
+└──────────────────────────────┘
 ```
 
-The frontend handles user interaction and presentation. The backend exposes API endpoints and enforces access restrictions, while MongoDB stores application data persistently.
-
-## Project Structure
+### Project Structure
 
 ```text
-MotorHub-Submission/
+motorhub-car-dealership/
 ├── backend/
 │   ├── src/
 │   │   ├── middleware/
@@ -168,40 +198,45 @@ MotorHub-Submission/
 │   ├── index.html
 │   ├── package.json
 │   └── vite.config.js
+├── screenshots/
 ├── .gitignore
 └── README.md
 ```
 
-## Getting Started
+## 💻 Getting Started
+
+Follow these instructions to run MotorHub locally.
 
 ### Prerequisites
 
-Install the following before running the application:
+Install the following:
 
-- Node.js and npm.
-- MongoDB, either a local instance or a MongoDB Atlas database.
-- Git.
-- A modern web browser.
+- [Node.js and npm](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/) locally or through MongoDB Atlas
+- [Git](https://git-scm.com/)
+- A modern web browser
 
 ### 1. Clone the Repository
+
+Open a terminal and run:
 
 ```bash
 git clone https://github.com/akshatha-27/motorhub-car-dealership.git
 cd motorhub-car-dealership
 ```
 
-### 2. Configure the Backend
+### 2. Set Up the Backend
+
+Navigate to the backend directory and install dependencies:
 
 ```bash
 cd backend
 npm install
 ```
 
-Create a `.env` file inside the `backend/` directory.
+Create a `.env` file inside the `backend/` directory. Add the environment variables expected by the backend configuration.
 
-Configure the MongoDB connection string, authentication secret, and port using the environment variable names expected by the backend configuration. Keep actual credentials and secrets out of version control.
-
-Example configuration template:
+Example template:
 
 ```env
 PORT=5000
@@ -209,172 +244,180 @@ MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=replace_with_a_strong_random_secret
 ```
 
-**Note:** Ensure the variable names match those referenced in the backend source code. Never commit real database credentials or authentication secrets.
+**Important:** Verify the environment variable names against the backend source code before running the application. Use your own database connection string and a strong, private authentication secret. Never commit real credentials to GitHub.
 
-### 3. Configure the Frontend
+### 3. Set Up the Frontend
 
-Open another terminal from the project root:
+Open a second terminal from the project root:
 
 ```bash
 cd frontend
 npm install
 ```
 
-The frontend currently communicates with the backend API at:
+The frontend is configured to communicate with the backend API at:
 
 ```text
 http://localhost:5000/api
 ```
 
-Ensure the backend is running on the corresponding port. If the API URL is changed, update the frontend configuration accordingly.
+If you change the backend port or API address, update the frontend configuration accordingly.
 
-## Running the Application
+### 4. Start the Backend Server
 
-### Start the Backend
-
-From the `backend/` directory:
+In the first terminal, navigate to `backend/` and run:
 
 ```bash
 npm run dev
 ```
 
-The development server uses Nodemon to restart when backend files change.
-
-Alternatively, start the server without Nodemon:
+Alternatively, use:
 
 ```bash
 npm start
 ```
 
-### Start the Frontend
+The backend should start on the configured port. Ensure MongoDB is accessible and the environment configuration is correct.
 
-From the `frontend/` directory, open a separate terminal and run:
+### 5. Start the Frontend Server
+
+In the second terminal, navigate to `frontend/` and run:
 
 ```bash
 npm run dev
 ```
 
-Open the local URL displayed by Vite in your browser.
+Vite will display a local development URL in the terminal, commonly:
 
-### Initialize the Administrator
+```text
+http://localhost:5173
+```
 
-The repository includes an administrator seed script:
+Open the displayed URL in your browser to use MotorHub.
+
+### 6. Initialize the Administrator
+
+If an administrator account is required, review the seed script and run it from the `backend/` directory:
 
 ```bash
 node seedAdmin.js
 ```
 
-Run it from the `backend/` directory after configuring the database. Review the script first and use the credentials configured by the seed process.
+Follow the credentials and configuration defined by the script.
 
-**Important:** The `resetInventory.js` script deletes existing vehicle records before inserting sample inventory. Use it only when you intentionally want to reset the inventory, preferably in a development database.
+> **Warning:** `resetInventory.js` deletes existing vehicle records before inserting sample inventory. Run it only when you intentionally want to reset inventory in a development database.
 
-## Testing and TDD
+## 🧪 Testing and Test Report
 
-Testing is an important part of the MotorHub implementation. The backend contains separate test suites for authentication and vehicle operations.
+MotorHub includes backend tests for authentication and vehicle-related operations.
 
-### Run the Backend Tests
+### Run the Tests
 
-From the `backend/` directory:
+From the backend directory:
 
 ```bash
 npm test
 ```
 
-The test command runs Jest serially using the configured `--runInBand` option.
+The configured test command uses Jest, with Supertest for HTTP endpoint testing.
 
-The test suites are:
+### Recorded Test Results
+
+The following results were observed during development:
+
+| Test Metric | Result |
+|---|---:|
+| Test suites passed | 2 / 2 |
+| Tests passed | 8 / 8 |
+| Failed tests | 0 |
+| Overall result | **PASS** |
+
+These results represent the recorded test run. Run the test command against the submitted code to verify the current state.
+
+### Test Suites
 
 - `tests/auth.test.js` — authentication-related behaviour.
 - `tests/vehicles.test.js` — vehicle-related behaviour.
 
-### Test Results
-
-During development, the following verification results were observed:
-
-<img width="494" height="368" alt="image" src="https://github.com/user-attachments/assets/170308ad-1de7-4595-8e9c-dc92eeca2b60" />
-
-These results reflect the recorded development run. Run the commands again against the submitted code to verify the current state.
-
 ### Test-Driven Development Approach
 
-The intended TDD workflow is:
+The project follows the Red–Green–Refactor cycle:
 
-1. **Red:** Write a test that describes the expected behaviour and confirm that it fails for the intended reason.
-2. **Green:** Implement the minimum code necessary to make the test pass.
+1. **Red:** Write a test for the expected behaviour and verify that it fails for the intended reason.
+2. **Green:** Implement the functionality needed to pass the test.
 3. **Refactor:** Improve the implementation while keeping the tests passing.
-4. **Repeat:** Apply the cycle to additional requirements and edge cases.
+4. **Repeat:** Continue for additional requirements and edge cases.
 
-The automated tests help verify backend behaviour and reduce the risk of regressions when the implementation changes.
+This approach helps verify application behaviour and reduces the risk of regressions.
 
-## API Overview
+## 🔌 API Overview
 
-The backend organizes its HTTP API into two main route groups:
+The backend organizes its API into two primary route groups:
 
-| Route group | Responsibility |
+| Route Group | Responsibility |
 |---|---|
 | Authentication routes | User registration and login |
-| Vehicle routes | Vehicle listing, inventory operations, and purchasing |
+| Vehicle routes | Vehicle listing, inventory management, and purchasing |
 
-The Express application mounts these routes under the `/api` API prefix.
+The Express application mounts the route groups under the `/api` prefix.
 
-For the precise endpoint paths, HTTP methods, request bodies, authentication requirements, and response formats, refer to the implementations in:
+For the exact endpoint paths, HTTP methods, request bodies, authentication requirements, and response formats, refer to:
 
 - `backend/src/routes/auth.js`
 - `backend/src/routes/vehicles.js`
 
-Protected operations should be accessed with the required authentication credentials and permissions.
+## 🔐 Security and Design Considerations
 
-## Security and Design Considerations
+- Protected operations use authentication middleware.
+- Administrative operations should be restricted to authorized roles.
+- Database credentials and authentication secrets belong in environment configuration.
+- Routes, models, middleware, and frontend components are organized into separate modules.
+- MongoDB provides persistent storage for application records.
+- Input validation and error handling are important for reliable inventory operations.
 
-- **Authentication:** Authentication middleware protects operations that require a logged-in user.
-- **Authorization:** Administrative operations should be restricted to users with the appropriate role.
-- **Credential management:** Database connection strings and authentication secrets belong in local environment configuration, not in source control.
-- **Separation of concerns:** Routes, data models, middleware, and frontend components are maintained in separate modules.
-- **Persistent storage:** MongoDB is used for application data rather than relying exclusively on browser state.
-- **Input validation:** Requests should be validated before modifying database records.
-- **Error handling:** The application provides feedback for failed operations and errors.
-
-
-## My AI Usage
+## 🤖 My AI Usage
 
 ### AI Tools Used
-- **ChatGPT (OpenAI):** Used as an AI assistant during the development and documentation of MotorHub, the Car Dealership Inventory System.
+
+**ChatGPT (OpenAI)** was used as an AI assistant during the development and documentation of MotorHub.
 
 ### How I Used AI
+
 I used ChatGPT as a support tool throughout the development process. My use of AI included:
 
-- **Understanding requirements:** Getting help breaking down the project requirements into smaller development tasks.
-- **Backend development:** Discussing the structure of REST API endpoints, authentication, vehicle inventory management, and how different backend components work together.
-- **Test-Driven Development (TDD):** Getting explanations of the TDD workflow, including writing tests, implementing functionality to satisfy the tests, and improving the code based on test results.
-- **Debugging:** Understanding error messages and troubleshooting issues encountered while running the backend tests and building the frontend.
-- **Frontend development:** Getting guidance on connecting frontend components with backend APIs and resolving development issues.
-- **Documentation:** Getting help organizing the README, explaining the project structure, and documenting setup instructions, features, and testing procedures.
+- **Understanding requirements:** Breaking the project requirements into smaller development tasks.
+- **Backend development:** Discussing REST API structure, authentication, inventory management, and the responsibilities of different backend components.
+- **Test-Driven Development:** Understanding the Red–Green–Refactor cycle and how automated tests help verify functionality.
+- **Debugging:** Interpreting error messages and troubleshooting issues encountered during backend testing and frontend development.
+- **Frontend development:** Getting guidance on frontend and backend integration and resolving development issues.
+- **Documentation:** Organizing the README, explaining the project structure, and documenting setup and testing procedures.
 
 ### My Reflection on AI Usage
-Using ChatGPT helped me understand unfamiliar concepts, troubleshoot errors more efficiently, and organize my development workflow. It was particularly useful when I encountered problems and needed explanations of possible causes and solutions.
 
-However, I treated AI as a support tool rather than a replacement for understanding the code. I reviewed the suggestions, ran the application and tests, and used the resulting output to check whether the implementation worked as expected. The backend test suite completed successfully, with **2 test suites passing and all 8 tests passing**.
+Using ChatGPT helped me understand unfamiliar concepts, troubleshoot errors more efficiently, and organize my workflow. It was especially useful when I encountered development problems and needed explanations of possible causes and solutions.
 
-This experience taught me that AI can improve productivity and support learning, but its suggestions still need to be evaluated and verified. I remain responsible for understanding the implementation, validating the results, and ensuring that the final project meets the requirements.
-## Future Improvements
+I treated AI as a support tool rather than a replacement for understanding the code. I reviewed suggestions and used application execution and test results to check the implementation. The recorded backend test run completed with two passing test suites and eight passing tests.
 
-Potential extensions include:
+This experience taught me that AI can improve productivity and support learning, but its suggestions must be evaluated and verified. I remain responsible for understanding the code, validating the results, and ensuring the final project meets its requirements.
 
-- Add pagination and more advanced vehicle filtering.
-- Improve request validation and centralized error handling.
-- Add integration tests for authorization, stock updates, and purchasing edge cases.
-- Add frontend component and end-to-end tests.
+## 🔮 Future Improvements
+
+Potential improvements include:
+
+- Add pagination and more advanced inventory filters.
+- Expand automated tests for authorization, stock updates, and purchasing edge cases.
+- Introduce frontend component and end-to-end testing.
 - Improve accessibility and mobile responsiveness.
-- Add continuous integration to run tests on each push.
-- Add deployment configuration and production environment settings.
+- Configure continuous integration to run tests on each push.
+- Add production deployment configuration and monitoring.
 - Improve audit logging for inventory changes.
 
-## Repository
+## 📂 Repository
 
-**GitHub:** https://github.com/akshatha-27/motorhub-car-dealership
+**GitHub:** [akshatha-27/motorhub-car-dealership](https://github.com/akshatha-27/motorhub-car-dealership)
 
-## Conclusion
+---
 
-MotorHub demonstrates a full-stack approach to dealership inventory management by combining a React frontend, an Express REST API, MongoDB persistence, authentication and authorization, and automated backend testing.
-
-The project is structured to support maintainability, testability, and further development, with a focus on implementing and verifying core inventory management functionality.
+<p align="center">
+  <strong>MotorHub — Making dealership inventory management more organized, accessible, and maintainable.</strong>
+</p>
