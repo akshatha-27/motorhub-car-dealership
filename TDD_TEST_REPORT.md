@@ -343,27 +343,7 @@ Time:        5.371 s, estimated 6 s
 Ran all test suites.
 ```
 
-## 4. Test Summary
-
-| Metric | Result |
-|---|---:|
-| Total test suites | 2 |
-| Passed test suites | 2 |
-| Failed test suites | 0 |
-| Total tests | 8 |
-| Passed tests | 8 |
-| Failed tests | 0 |
-| Snapshots | 0 |
-| Execution time | 5.371 seconds |
-| Overall status | PASS |
-
-**Test pass rate:**
-
-\[
-\frac{8}{8}\times100=100\%
-\]
-
-## 5. Conclusion
+## 4. Conclusion
 
 The MotorHub Car Dealership Inventory System was developed using the Test-Driven Development approach. During implementation, several tests initially failed because the corresponding API endpoints or functionality were not yet implemented correctly. After the required changes were made, the tests passed successfully.
 
