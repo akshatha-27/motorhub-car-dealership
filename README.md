@@ -334,14 +334,28 @@ Protected operations should be accessed with the required authentication credent
 - **Input validation:** Requests should be validated before modifying database records.
 - **Error handling:** The application provides feedback for failed operations and errors.
 
-## AI Usage Disclosure
 
-AI tools were used as development assistance during the project for tasks such as understanding implementation approaches, troubleshooting errors, refining documentation, and improving development workflow.
+## My AI Usage
 
-The submitted source code, application behaviour, test execution, and project-specific decisions should be reviewed and verified by the developer. AI assistance does not replace responsibility for understanding, testing, and maintaining the implementation.
+### AI Tools Used
+- **ChatGPT (OpenAI):** Used as an AI assistant during the development and documentation of MotorHub, the Car Dealership Inventory System.
 
-A separate `PROMPTS.md` file should contain the relevant original AI prompts and responses or public conversation links, as required by the assignment. Do not fabricate conversation records or claim that unverified suggestions were implemented.
+### How I Used AI
+I used ChatGPT as a support tool throughout the development process. My use of AI included:
 
+- **Understanding requirements:** Getting help breaking down the project requirements into smaller development tasks.
+- **Backend development:** Discussing the structure of REST API endpoints, authentication, vehicle inventory management, and how different backend components work together.
+- **Test-Driven Development (TDD):** Getting explanations of the TDD workflow, including writing tests, implementing functionality to satisfy the tests, and improving the code based on test results.
+- **Debugging:** Understanding error messages and troubleshooting issues encountered while running the backend tests and building the frontend.
+- **Frontend development:** Getting guidance on connecting frontend components with backend APIs and resolving development issues.
+- **Documentation:** Getting help organizing the README, explaining the project structure, and documenting setup instructions, features, and testing procedures.
+
+### My Reflection on AI Usage
+Using ChatGPT helped me understand unfamiliar concepts, troubleshoot errors more efficiently, and organize my development workflow. It was particularly useful when I encountered problems and needed explanations of possible causes and solutions.
+
+However, I treated AI as a support tool rather than a replacement for understanding the code. I reviewed the suggestions, ran the application and tests, and used the resulting output to check whether the implementation worked as expected. The backend test suite completed successfully, with **2 test suites passing and all 8 tests passing**.
+
+This experience taught me that AI can improve productivity and support learning, but its suggestions still need to be evaluated and verified. I remain responsible for understanding the implementation, validating the results, and ensuring that the final project meets the requirements.
 ## Future Improvements
 
 Potential extensions include:
