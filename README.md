@@ -21,6 +21,41 @@ MotorHub brings customers and dealership administrators together through a singl
 
 ---
 
+## Deployment
+
+MotorHub is deployed using Vercel, Render, and MongoDB Atlas.
+
+### Live Application
+
+- **Frontend:** https://motorhub-car-dealership.vercel.app/
+- **Backend API:** https://motorhub-car-dealership.onrender.com
+- **GitHub Repository:** https://github.com/akshatha-27/motorhub-car-dealership
+
+### Deployment Architecture
+
+- **Frontend – Vercel:** Hosts the React application built using Vite.
+- **Backend – Render:** Hosts the Node.js and Express REST API.
+- **Database – MongoDB Atlas:** Stores user accounts and vehicle inventory.
+
+### Deployment Steps
+
+1. Push the project code to GitHub.
+2. Deploy the backend on Render using the `backend` directory.
+3. Configure the required environment variables in Render, including `MONGODB_URI` and `JWT_SECRET`.
+4. Deploy the frontend on Vercel using the `frontend` directory.
+5. Configure the frontend API URL to point to the deployed backend.
+6. Test the live application to verify registration, login, and vehicle inventory operations.
+
+### Environment Configuration
+
+The backend requires the following environment variables:
+
+- `MONGODB_URI` – MongoDB Atlas connection string.
+- `JWT_SECRET` – Secret used for JWT authentication.
+- `PORT` – Port configuration; the deployed server should use the port provided by the hosting platform.
+
+**Note:** Environment variables and secrets are configured through the hosting platform's settings and are not committed to the GitHub repository.
+
 ## ✨ At a Glance
 
 | | |
