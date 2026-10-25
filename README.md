@@ -291,6 +291,9 @@ The test suites are:
 
 During development, the following verification results were observed:
 
+<img width="494" height="368" alt="image" src="https://github.com/user-attachments/assets/170308ad-1de7-4595-8e9c-dc92eeca2b60" />
+
+
 | Verification | Result |
 |---|---|
 | Authentication test suite | Passed |
