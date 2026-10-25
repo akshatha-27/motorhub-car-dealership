@@ -325,6 +325,9 @@ The configured test command uses Jest, with Supertest for HTTP endpoint testing.
 
 The following results were observed during development:
 
+<img width="494" height="368" alt="Screenshot 2026-10-25 193622" src="https://github.com/user-attachments/assets/c61a7b0b-50fd-4120-8fc2-28991dc827ae" />
+
+
 | Test Metric | Result |
 |---|---:|
 | Test suites passed | 2 / 2 |
