@@ -56,6 +56,15 @@ The backend requires the following environment variables:
 
 **Note:** Environment variables and secrets are configured through the hosting platform's settings and are not committed to the GitHub repository.
 
+## Demo Admin Login
+
+Use the following credentials to access the admin dashboard:
+
+- **Email:** `your-demo-admin-email`
+- **Password:** `your-demo-admin-password`
+
+**Note:** These credentials are provided for project evaluation and demonstration purposes only.
+
 ## ✨ At a Glance
 
 | | |
